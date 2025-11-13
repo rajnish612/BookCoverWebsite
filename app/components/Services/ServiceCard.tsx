@@ -1,5 +1,6 @@
 import React from 'react'
 import { Merriweather } from "next/font/google";
+import Link from "next/link";
 
 const merriWeatherBold = Merriweather({
   subsets: ["latin"],
@@ -16,6 +17,7 @@ interface ServiceCardProps {
   description: string;
   features?: string[];
   buttonText?: string;
+  buttonLink?: string;
   onButtonClick?: () => void;
 }
 
@@ -25,6 +27,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   description,
   features = [],
   buttonText = "Learn More",
+  buttonLink,
   onButtonClick
 }) => {
   return (
@@ -61,12 +64,21 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       )}
 
       {/* Call to Action Button */}
-      <button
-        onClick={onButtonClick}
-        className={`w-full mt-auto py-3 px-4 bg-black text-white hover:bg-gray-800 font-medium rounded transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 ${merriWeatherMedium.className}`}
-      >
-        {buttonText}
-      </button>
+      {buttonLink ? (
+        <Link
+          href={buttonLink}
+          className={`w-full mt-auto py-3 px-4 bg-black text-white hover:bg-gray-800 font-medium rounded transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 text-center block ${merriWeatherMedium.className}`}
+        >
+          {buttonText}
+        </Link>
+      ) : (
+        <button
+          onClick={onButtonClick}
+          className={`w-full mt-auto py-3 px-4 bg-black text-white hover:bg-gray-800 font-medium rounded transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 ${merriWeatherMedium.className}`}
+        >
+          {buttonText}
+        </button>
+      )}
     </div>
   )
 }

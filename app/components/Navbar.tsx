@@ -69,7 +69,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href="#contact"
+              href="/contact"
               className={`px-4 py-2 rounded-lg transition-all duration-300 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 ${merriweatherLight.className}`}
             >
               Contact
@@ -175,7 +175,7 @@ const Navbar = () => {
           </li>
           <li className="w-full">
             <Link
-              href="#contact"
+              href="/contact"
               onClick={() => setSideBarOpen(false)}
               className={`w-full px-4 py-3 rounded-lg transition-all duration-300 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-700 flex items-center ${merriweatherLight.className}`}
             >
