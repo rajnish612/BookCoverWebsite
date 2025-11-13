@@ -34,13 +34,15 @@ const HeroSection = () => {
           Contact With me
         </button>
       </div>
+      
+      {/* Bottom Wave */}
       <svg
-        className="absolute -bottom-5 left-0"
-        viewBox="0 0 1440 150"
+        className="absolute -bottom-1 left-0 w-full h-20 md:h-32"
+        viewBox="0 0 1440 120"
         preserveAspectRatio="none"
       >
         <path
-          d="M0,64 C360,160 1080,0 1440,96 L1440,150 L0,150 Z"
+          d="M0,64 C360,160 1080,0 1440,96 L1440,120 L0,120 Z"
           fill="#ffffff"
         ></path>
       </svg>
