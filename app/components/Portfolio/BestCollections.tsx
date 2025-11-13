@@ -13,33 +13,44 @@ const merriWeatherMedium = Merriweather({
   subsets: ["latin"],
   weight: ["400"],
 });
-
+const books = [
+  "/images/cards/A.jpg",
+  "/images/cards/B.jpg",
+  "/images/cards/C.jpg",
+  "/images/cards/D.jpg",
+  "/images/cards/E.jpg",
+  "/images/cards/F.jpg",
+  "/images/cards/G.jpg",
+  "/images/cards/H.jpg",
+  "/images/cards/I.jpg",
+  "/images/cards/J.jpg",
+  "/images/cards/K.jpg",
+];
 const BestCollections = () => {
   return (
     <section id="bestCollection" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className={`text-4xl md:text-5xl text-gray-900 mb-6 ${merriWeatherBold.className}`}>
+          <h2
+            className={`text-4xl md:text-5xl text-gray-900 mb-6 ${merriWeatherBold.className}`}
+          >
             Best Collections
           </h2>
-          <p className={`text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed ${merriWeatherMedium.className}`}>
-            Discover our most popular and award-winning book cover designs that have 
-            helped authors captivate readers and achieve bestseller status.
+          <p
+            className={`text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed ${merriWeatherMedium.className}`}
+          >
+            Discover my best book cover designs that have helped authors
+            captivate readers and achieve bestseller status.
           </p>
           <div className="w-24 h-1 bg-gray-300 mx-auto mt-8"></div>
         </div>
 
         {/* Cover Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-12">
-          <CoverCard bookIndex={0} />
-          <CoverCard bookIndex={1} />
-          <CoverCard bookIndex={2} />
-          <CoverCard bookIndex={3} />
-          <CoverCard bookIndex={0} />
-          <CoverCard bookIndex={1} />
-          <CoverCard bookIndex={2} />
-          <CoverCard bookIndex={3} />
+          {books.map((book, idx) => {
+            return <CoverCard url={book} key={idx} />;
+          })}
         </div>
 
         {/* View All Button */}

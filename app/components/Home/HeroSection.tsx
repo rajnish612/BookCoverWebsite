@@ -1,6 +1,7 @@
 import React from "react";
 import { Playfair } from "next/font/google";
 import { Dancing_Script } from "next/font/google";
+import Image from "next/image";
 const playFair = Playfair({
   subsets: ["vietnamese"],
   weight: ["700"],
@@ -12,9 +13,14 @@ const test = Dancing_Script({
 
 const HeroSection = () => {
   return (
-    <div id="heroSection" className="h-[800px]  relative  ">
-      <img
-        className="w-full h-full object-cover object-center"
+    <div
+      id="heroSection"
+      className="md:h-[800px] sm:h-[500px] h-[400px]   relative  "
+    >
+      <Image
+        width={1280}
+        height={720}
+        className="w-full h-full object-cover "
         src={"/images/covers/Home.jpg"}
         alt="Book Cover"
       />

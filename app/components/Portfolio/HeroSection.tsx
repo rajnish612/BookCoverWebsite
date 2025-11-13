@@ -17,13 +17,13 @@ const HeroSection = () => {
         alt="Book Cover"
       />
 
-      <div className="flex flex-col text-left justify-center items-start px-20 absolute inset-0">
-        <span className="text-4xl  md:text-2xl ">
+      <div className="flex flex-col text-left justify-center items-start px-5 md:px-20 absolute inset-0">
+        <span className="text-2xl  md:text-4xl ">
           FREELANCE BOOK COVER DESIGNER & DIGITAL ARTIST
         </span>
         <span
           style={merriWeatherBold.style}
-          className="mt-4 text-6xl  md:text-5xl"
+          className="mt-4 text-2xl wrap-break-word  md:text-6xl"
         >
           BITU BURAGOHAIN
         </span>
