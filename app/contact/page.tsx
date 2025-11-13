@@ -48,7 +48,7 @@ Looking forward to hearing from you!`;
     const encodedMessage = encodeURIComponent(whatsappMessage);
 
     // Replace with your actual WhatsApp number (with country code, no + sign)
-    const whatsappNumber = "1234567890"; // Update this with the designer's WhatsApp number
+    const whatsappNumber = "+916002193833"; // Update this with the designer's WhatsApp number
 
     // Create WhatsApp URL
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
@@ -158,7 +158,7 @@ Looking forward to hearing from you!`;
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border text-black border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-300"
                   placeholder="Your full name"
                 />
               </div>
@@ -177,7 +177,7 @@ Looking forward to hearing from you!`;
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-300"
+                  className="w-full text-black px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-300"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -195,7 +195,7 @@ Looking forward to hearing from you!`;
                   value={formData.service}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-300"
+                  className="w-full text-black px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-300"
                 >
                   <option value="">Select a service</option>
                   <option value="Book Cover Design">Book Cover Design</option>
@@ -221,7 +221,7 @@ Looking forward to hearing from you!`;
                   onChange={handleInputChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-300"
+                  className="w-full text-black px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-300"
                   placeholder="Tell me about your project, timeline, budget, and any specific requirements..."
                 />
               </div>
