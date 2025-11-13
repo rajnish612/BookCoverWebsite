@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: white;
     --foreground: #ededed;
   }
 }
@@ -23,4 +23,13 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.wavy-div {
+  background: #f5c6aa; /* Any color or gradient */
+  color: #fff;
+  text-align: center;
+
+  /* Wavy bottom */
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 75% 85%, 50% 80%, 25% 85%, 0 80%);
 }
